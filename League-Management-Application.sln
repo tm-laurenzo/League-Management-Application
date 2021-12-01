@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "League-Management-Application", "League-Management-Application\League-Management-Application.csproj", "{70820F36-CDBF-4A84-98F2-0E8B79ED2872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "League-Management-Utilities", "League-Management-Utilities\League-Management-Utilities.csproj", "{192C6E93-13BA-45C5-B579-EC74DA325E57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "League-Management-Models", "League-Management-Models\League-Management-Models.csproj", "{19E11347-E865-41D4-AC0E-6642281A82AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "League-Management-Dtos", "League-Management-Dtos\League-Management-Dtos.csproj", "{3E5A43B1-3148-4E22-9BD6-BDD43DFA1DB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "League-Management-Data", "League-Management-Data\League-Management-Data.csproj", "{5AB9B639-37B9-4BA2-901E-74FCA09EE8FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "League-Management-Core", "League-Management-Core\League-Management-Core.csproj", "{41B5D10B-EB1D-4FA5-86BC-E498C823FFD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70820F36-CDBF-4A84-98F2-0E8B79ED2872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70820F36-CDBF-4A84-98F2-0E8B79ED2872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70820F36-CDBF-4A84-98F2-0E8B79ED2872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70820F36-CDBF-4A84-98F2-0E8B79ED2872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192C6E93-13BA-45C5-B579-EC74DA325E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192C6E93-13BA-45C5-B579-EC74DA325E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192C6E93-13BA-45C5-B579-EC74DA325E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192C6E93-13BA-45C5-B579-EC74DA325E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19E11347-E865-41D4-AC0E-6642281A82AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19E11347-E865-41D4-AC0E-6642281A82AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19E11347-E865-41D4-AC0E-6642281A82AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19E11347-E865-41D4-AC0E-6642281A82AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E5A43B1-3148-4E22-9BD6-BDD43DFA1DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E5A43B1-3148-4E22-9BD6-BDD43DFA1DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E5A43B1-3148-4E22-9BD6-BDD43DFA1DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E5A43B1-3148-4E22-9BD6-BDD43DFA1DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB9B639-37B9-4BA2-901E-74FCA09EE8FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB9B639-37B9-4BA2-901E-74FCA09EE8FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB9B639-37B9-4BA2-901E-74FCA09EE8FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB9B639-37B9-4BA2-901E-74FCA09EE8FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41B5D10B-EB1D-4FA5-86BC-E498C823FFD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B5D10B-EB1D-4FA5-86BC-E498C823FFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B5D10B-EB1D-4FA5-86BC-E498C823FFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B5D10B-EB1D-4FA5-86BC-E498C823FFD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB3AB098-C81B-4674-8DDF-5676D3505374}
+	EndGlobalSection
+EndGlobal
