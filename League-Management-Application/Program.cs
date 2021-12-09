@@ -1,5 +1,4 @@
 using League_Management_Application.Extensions;
-using League_Management_Applicationi.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;

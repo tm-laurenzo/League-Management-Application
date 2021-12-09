@@ -4,7 +4,7 @@ using Serilog;
 using Serilog.Events;
 using System.Security.Cryptography.X509Certificates;
 
-namespace League_Management_Applicationi.Extensions
+namespace League_Management_Application.Extensions
 {
     public static class LogSettingsExtension
     {

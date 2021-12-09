@@ -8,3 +8,4 @@ Agents
 Matches
 League Table
 
+Capability to transfer player/manager from one team to another

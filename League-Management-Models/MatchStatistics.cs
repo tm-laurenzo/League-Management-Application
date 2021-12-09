@@ -13,6 +13,7 @@ namespace League_Management_Models
         public Guid Id { get; set; }
         public Team Team { get; set; }
         public ICollection<Goal> Goals { get; set; }
+        public int MyProperty { get; set; }
         public int Throwings { get; set; }
         public int CornerKicks { get; set; }
         public int PenaltyKicks { get; set; }

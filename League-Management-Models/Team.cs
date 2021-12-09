@@ -13,9 +13,11 @@ namespace League_Management_Models
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Owner { get; set; }
+        public string OwnerId { get; set; }
         public DateTime FoundedeAt { get; set; }
-        public Manager Manager { get; set; }
         public ICollection<Player> Players { get; set; }
+        public Manager Manager { get; set; }
+        public string Logo { get; set; }
         public Double Valution { get; set; }
     }
 }
