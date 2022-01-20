@@ -73,7 +73,7 @@ namespace League_Management_Data.Seeder
             }
 
 
-            // Bookings and Payment
+            // Bookings and Payment //I am a badass C# dev
           /*  if (!dbContext.Bookings.Any())
             {
                 var path = File.ReadAllText(FilePath(baseDir, "Json/bookings.json"));

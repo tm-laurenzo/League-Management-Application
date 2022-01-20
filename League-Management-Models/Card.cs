@@ -8,6 +8,7 @@ namespace League_Management_Models
 {
     public class Card
     {
+        public Guid Id { get; set; }
         public Player Player { get; set; }
         //Get a way to set the maximum number to 2 and if a player 
         //has 2 yellow cards, set red card to one

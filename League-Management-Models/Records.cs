@@ -8,6 +8,7 @@ namespace League_Management_Models
 {
     public class Records
     {
-        public ICollection<Match> MyProperty { get; set; }
+        public Guid Id { get; set; }
+        public ICollection<Match> MatchRecords { get; set; }
     }
 }
