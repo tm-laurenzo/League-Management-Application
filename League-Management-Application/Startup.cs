@@ -1,7 +1,11 @@
 using League_Management_Application.Extensions;
+using League_Management_Data.Context;
+using League_Management_Data.Seeder;
+using League_Management_Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,8 +44,11 @@ namespace League_Management_Application
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline  .
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+             LMADbContext dbContext, UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
+
         {
             if (env.IsDevelopment())
             {
@@ -50,6 +57,7 @@ namespace League_Management_Application
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "League_Management_Application v1"));
             }
 
+            LMASeeder.SeedData(dbContext, userManager, roleManager).GetAwaiter().GetResult();
             app.UseHttpsRedirection();
 
             app.UseRouting();
