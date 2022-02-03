@@ -32,9 +32,9 @@ namespace League_Management_Data.Seeder
                 var user = new User
                 {
                     Id = Guid.NewGuid().ToString(),
-                    FirstName = "Peter",
-                    LastName = "McCormick",
-                    UserName = "Pero",
+                    FirstName = "Chibuike",
+                    LastName = "Chidolue",
+                    UserName = "Laurenzo",
                     Email = "info@lma.com",
                     PhoneNumber = "09043546576",
                     Gender = "Male",
@@ -58,7 +58,7 @@ namespace League_Management_Data.Seeder
                     await userManager.CreateAsync(lmaUsers[i], "Password@123");
                     if (i < 20)
                     {
-                        await userManager.AddToRoleAsync(lmaUsers[i], "Owner");
+                        await userManager.AddToRoleAsync(lmaUsers[i], "ClubOwner");
 
                     }
                     else if (i >= 20 && i < 40)
