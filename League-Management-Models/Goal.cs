@@ -8,6 +8,7 @@ namespace League_Management_Models
 {
     public class Goal
     {
+        public Guid Id { get; set; }
         public Team Team { get; set; }
         public Player Scorer { get; set; }
         public Player AssistProvider { get; set; }

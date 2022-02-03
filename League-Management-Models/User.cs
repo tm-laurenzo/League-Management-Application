@@ -18,6 +18,10 @@ namespace League_Management_Models
         public bool IsActive { get; set; }
         public string PublicId { get; set; }
         public string Avatar { get; set; }
+        public Owner Owner { get; set; }
+        public Player Player { get; set; }
+        public Manager Manager { get; set; }
+        public Agent Agent { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }
