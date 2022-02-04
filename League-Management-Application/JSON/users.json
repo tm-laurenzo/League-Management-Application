@@ -529,17 +529,6 @@
       "UpdatedAt": "2015-11-30T06:59:46 -01:00"
     },
     {
-      "FirstName": "Brooks",
-      "LastName": "Moon",
-      "Gender": "Male",
-      "Age": 37,
-      "IsActive": "True",
-      "PublicId": "c6c4a664-c8b7-4144-ac2c-7c8a1731eca3",
-      "Avatar": "http://placehold.it/32x32",
-      "CreatedAt": "2014-02-17T06:25:00 -01:00",
-      "UpdatedAt": "2017-04-15T03:55:11 -01:00"
-    },
-    {
       "FirstName": "Terra",
       "LastName": "Clements",
       "Gender": "Male",
