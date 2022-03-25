@@ -1,0 +1,16 @@
+﻿[
+  "{{repeat(500)}}",
+  {
+    "Id": "{{guid()}}",
+    "FirstName": "{{firstName()}}",
+    "LastName": "{{surname()}}",
+    "Gender": "{{\"Male\"}}",
+    "Age": "{{integer(20, 40)}}",
+    "IsActive": "{{\"True\"}}",
+    "PublicId": "{{guid()}}",
+    "Avatar": "http://placehold.it/32x32",
+    "CreatedAt": "{{date(new Date(2014, 0, 1), new Date(), \"YYYY-MM-ddThh:mm:ss Z\")}}",
+    "UpdatedAt": "{{date(new Date(2014, 0, 1), new Date(), \"YYYY-MM-ddThh:mm:ss Z\")}}"
+  }
+
+]
