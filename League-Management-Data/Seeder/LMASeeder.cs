@@ -52,7 +52,7 @@ namespace League_Management_Data.Seeder
                 var path = File.ReadAllText(FilePath(baseDir, "JSON/users.json"));
 
                 var lmaUsers = JsonConvert.DeserializeObject<List<User>>(path);
-                for (int i = 0; i < lmaUsers.Count; i++)
+                for (int i = 0; i < lmaUsers.Count(); i++)
                 {
                     lmaUsers[i].EmailConfirmed = true;
                     await userManager.CreateAsync(lmaUsers[i], "Password@123");
