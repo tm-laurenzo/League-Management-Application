@@ -52,14 +52,13 @@ namespace League_Management_Data.Seeder
                 var path = File.ReadAllText(FilePath(baseDir, "JSON/users.json"));
 
                 var lmaUsers = JsonConvert.DeserializeObject<List<User>>(path);
-                for (int i = 0; i < lmaUsers.Count; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     lmaUsers[i].EmailConfirmed = true;
                     await userManager.CreateAsync(lmaUsers[i], "Password@123");
-                    if (i < 20)
+                    if (i < 1)
                     {
-                        await userManager.AddToRoleAsync(lmaUsers[i], "ClubOwner");
-
+                        await userManager.AddToRoleAsync(lmaUsers[i], "Admin");
                     }
                     else if (i >= 20 && i < 40)
                     {
@@ -99,7 +98,7 @@ namespace League_Management_Data.Seeder
                 var wishList = JsonConvert.DeserializeObject<List<WishList>>(path);
                 await dbContext.WishLists.AddRangeAsync(wishList);
             }
-*/
+         */
 
             await dbContext.SaveChangesAsync();
         }
