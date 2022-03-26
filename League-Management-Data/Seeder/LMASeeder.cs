@@ -60,45 +60,12 @@ namespace League_Management_Data.Seeder
                     {
                         await userManager.AddToRoleAsync(lmaUsers[i], "Admin");
                     }
-                    else if (i >= 20 && i < 40)
-                    {
-                        await userManager.AddToRoleAsync(lmaUsers[i], "Manager");
-                    }
-                    else if (i >= 20 && i < 40)
-                    {
-                        await userManager.AddToRoleAsync(lmaUsers[i], "Manager");
-                    }
+                    
                 }
             }
 
 
-            // Bookings and Payment //I am a badass C# dev
-          /*  if (!dbContext.Bookings.Any())
-            {
-                var path = File.ReadAllText(FilePath(baseDir, "Json/bookings.json"));
-
-                var bookings = JsonConvert.DeserializeObject<List<Booking>>(path);
-                await dbContext.Bookings.AddRangeAsync(bookings);
-            }
-
-            // Hotels, roomtypes n rooms
-            if (!dbContext.Hotels.Any())
-            {
-                var path = File.ReadAllText(FilePath(baseDir, "Json/Hotel.json"));
-
-                var hotels = JsonConvert.DeserializeObject<List<Hotel>>(path);
-                await dbContext.Hotels.AddRangeAsync(hotels);
-            }
-
-            // Whishlist
-            if (!dbContext.WishLists.Any())
-            {
-                var path = File.ReadAllText(FilePath(baseDir, "Json/wishlists.json"));
-
-                var wishList = JsonConvert.DeserializeObject<List<WishList>>(path);
-                await dbContext.WishLists.AddRangeAsync(wishList);
-            }
-         */
+           
 
             await dbContext.SaveChangesAsync();
         }
