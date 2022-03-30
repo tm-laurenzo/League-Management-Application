@@ -56,17 +56,13 @@ namespace League_Management_Data.Seeder
                 {
                     lmaUsers[i].EmailConfirmed = true;
                     await userManager.CreateAsync(lmaUsers[i], "Password@123");
-                    if (i < 1)
+                    if (i < 20)
                     {
-                        await userManager.AddToRoleAsync(lmaUsers[i], "Admin");
+                        await userManager.AddToRoleAsync(lmaUsers[i], "ClubOwner");
                     }
                     
                 }
             }
-
-
-           
-
             await dbContext.SaveChangesAsync();
         }
 
