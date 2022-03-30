@@ -1,10 +1,14 @@
 ﻿[
-  "{{repeat(500)}}",
+  "{{repeat(5, 7)}}",
   {
+
     "Id": "{{guid()}}",
     "FirstName": "{{firstName()}}",
     "LastName": "{{surname()}}",
+    "UserName": "{{surname()}}",
+    "email": "{{email()}}",
     "Gender": "{{\"Male\"}}",
+    "PhoneNumber": "+1 {{phone()}}",
     "Age": "{{integer(20, 40)}}",
     "IsActive": "{{\"True\"}}",
     "PublicId": "{{guid()}}",
@@ -12,5 +16,4 @@
     "CreatedAt": "{{date(new Date(2014, 0, 1), new Date(), \"YYYY-MM-ddThh:mm:ss Z\")}}",
     "UpdatedAt": "{{date(new Date(2014, 0, 1), new Date(), \"YYYY-MM-ddThh:mm:ss Z\")}}"
   }
-
 ]
