@@ -52,6 +52,7 @@ namespace League_Management_Data.Seeder
                 var path = File.ReadAllText(FilePath(baseDir, "JSON/users.json"));
 
                 var lmaUsers = JsonConvert.DeserializeObject<List<User>>(path);
+                /* seed theg json*/
                 for (int i = 0; i < 5; i++)
                 {
                     lmaUsers[i].EmailConfirmed = true;
@@ -59,6 +60,7 @@ namespace League_Management_Data.Seeder
                     if (i < 20)
                     {
                         await userManager.AddToRoleAsync(lmaUsers[i], "ClubOwner");
+
                     }
                     
                 }
