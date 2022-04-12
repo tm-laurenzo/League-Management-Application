@@ -1,0 +1,130 @@
+[
+  {
+    "UserId": "6252c9469bb19a67ab72b39e",
+    "User": {
+      "id": "6252c9469bb19a67ab72b39e",
+      "FirstName": "Samantha",
+      "LastName": "Tucker",
+      "email": "cruz@musaphics",
+      "Gender": "female",
+      "Age": "31",
+      "IsActive": "false",
+      "PublicId": "148dcff5-2847-443f-9b55-e5f3ba28d86e",
+      "Avatar": "http://placehold.it/32x32",
+      "CreatedAt": "Fri Apr 11 2014 17:17:05 ",
+      "UpdatedAt": "Mon Apr 11 2022 12:10:46 "
+    }
+  },
+  {
+    "UserId": "6252c94694839ae8055c6343",
+    "User": {
+      "id": "6252c94694839ae8055c6343",
+      "FirstName": "Arnold",
+      "LastName": "Coleman",
+      "email": "dyer@biospan",
+      "Gender": "female",
+      "Age": "31",
+      "IsActive": "true",
+      "PublicId": "0e7de108-5a24-416f-ac84-aa51082bdd6d",
+      "Avatar": "http://placehold.it/32x32",
+      "CreatedAt": "Mon Dec 20 2010 12:48:11 ",
+      "UpdatedAt": "Mon Apr 11 2022 12:10:46 "
+    }
+  },
+  {
+    "UserId": "6252c946cfaf2ae29273e4e9",
+    "User": {
+      "id": "6252c946cfaf2ae29273e4e9",
+      "FirstName": "Trevino",
+      "LastName": "Odom",
+      "email": "boyd@tripsch",
+      "Gender": "female",
+      "Age": "40",
+      "IsActive": "false",
+      "PublicId": "df19bd88-cb5c-43f2-b122-09e7f7e683a6",
+      "Avatar": "http://placehold.it/32x32",
+      "CreatedAt": "Sun Feb 09 2014 11:39:32 ",
+      "UpdatedAt": "Mon Apr 11 2022 12:10:46 "
+    }
+  },
+  {
+    "UserId": "6252c94629e021f69b855d6e",
+    "User": {
+      "id": "6252c94629e021f69b855d6e",
+      "FirstName": "Mcneil",
+      "LastName": "Tamara",
+      "email": "sarah@endipine",
+      "Gender": "male",
+      "Age": "27",
+      "IsActive": "true",
+      "PublicId": "bd0898cd-3200-4ee5-ab9b-8b41beaff63f",
+      "Avatar": "http://placehold.it/32x32",
+      "CreatedAt": "Sun Apr 28 2013 00:43:22 ",
+      "UpdatedAt": "Mon Apr 11 2022 12:10:46 "
+    }
+  },
+  {
+    "UserId": "6252c94651bebb036294d6e0",
+    "User": {
+      "id": "6252c94651bebb036294d6e0",
+      "FirstName": "Garcia",
+      "LastName": "Tonya",
+      "email": "melton@uniworld",
+      "Gender": "female",
+      "Age": "32",
+      "IsActive": "false",
+      "PublicId": "2c8b5cd9-3e4b-48e0-bee8-a8cd538449af",
+      "Avatar": "http://placehold.it/32x32",
+      "CreatedAt": "Thu Feb 23 2012 21:45:56 ",
+      "UpdatedAt": "Mon Apr 11 2022 12:10:46 "
+    }
+  },
+  {
+    "UserId": "6252c946d238f112696de353",
+    "User": {
+      "id": "6252c946d238f112696de353",
+      "FirstName": "Lottie",
+      "LastName": "Jennings",
+      "email": "lee@genekom",
+      "Gender": "female",
+      "Age": "28",
+      "IsActive": "true",
+      "PublicId": "149ed517-2ac0-4378-a7f8-c5e250e6ac1d",
+      "Avatar": "http://placehold.it/32x32",
+      "CreatedAt": "Sun Oct 30 2011 00:39:45 ",
+      "UpdatedAt": "Mon Apr 11 2022 12:10:46 "
+    }
+  },
+  {
+    "UserId": "6252c9465de1af3597d7ba81",
+    "User": {
+      "id": "6252c9465de1af3597d7ba81",
+      "FirstName": "Katy",
+      "LastName": "Shelly",
+      "email": "alyssa@zepitope",
+      "Gender": "male",
+      "Age": "28",
+      "IsActive": "true",
+      "PublicId": "a9f94fe4-8512-48ce-b3c0-e9f2a5f631b8",
+      "Avatar": "http://placehold.it/32x32",
+      "CreatedAt": "Sun Apr 07 2013 00:14:36 ",
+      "UpdatedAt": "Mon Apr 11 2022 12:10:46 "
+    }
+  },
+  {
+    "UserId": "6252c94660db613ba3adfdeb",
+    "User": {
+      "id": "6252c94660db613ba3adfdeb",
+      "FirstName": "Marcella",
+      "LastName": "Kara",
+      "email": "russo@optyk",
+      "Gender": "male",
+      "Age": "27",
+      "IsActive": "true",
+      "PublicId": "0c34bcb2-ba51-4a62-b449-fc6a77096658",
+      "Avatar": "http://placehold.it/32x32",
+      "CreatedAt": "Sat Jun 07 2014 20:17:31 ",
+      "UpdatedAt": "Mon Apr 11 2022 12:10:46 "
+    }
+  }
+]

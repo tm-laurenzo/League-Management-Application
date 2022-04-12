@@ -1,5 +1,5 @@
 ﻿[
-  "{{repeat(5, 7)}}",
+  "{{repeat(5, 7)}}    Old Json Generator",
   {
 
     "Id": "{{guid()}}",
@@ -16,4 +16,27 @@
     "CreatedAt": "{{date(new Date(2014, 0, 1), new Date(), \"YYYY-MM-ddThh:mm:ss Z\")}}",
     "UpdatedAt": "{{date(new Date(2014, 0, 1), new Date(), \"YYYY-MM-ddThh:mm:ss Z\")}}"
   }
+  
+
+  NEW JSON GENERATOR
+  JG.repeat(5, 10, {
+  UserId: JG.objectId(),
+  User: function() {
+    return {
+    id: this.UserId,
+    FirstName: `${JG.firstName()}`,
+    LastName: `${JG.firstName()}`,
+    email:`${JG.firstName().toLowerCase() + '@' + JG.company().toLowerCase()}`,
+    Gender: `${JG.random('male','female')}`,
+    Age: `${JG.integer(20,40)}`,
+    IsActive: `${JG.bool()}`,
+	PublicId: `${JG.guid()}`,
+    Avatar: `${"http://placehold.it/32x32"}`,
+    CreatedAt: `${JG.date(new Date(2010, 0, 1), new Date(2015, 0, 1))}`,
+    UpdatedAt:`${moment(this.createdAt).add(1, 'days')}`,
+   };
+  },
+ 
+});
+
 ]

@@ -22,7 +22,7 @@ namespace League_Management_Data.Seeder
 
             if (!dbContext.Users.Any())
             {
-                List<string> roles = new List<string> { "Admin", "ClubOwner", "Manager", "Player", "Agent" };
+                List<string> roles = new List<string> { "Admin", "Owner", "Manager", "Player", "Agent" };
 
                 foreach (var role in roles)
                 {
@@ -49,19 +49,28 @@ namespace League_Management_Data.Seeder
                 await userManager.CreateAsync(user, "Password@123");
                 await userManager.AddToRoleAsync(user, "Admin");
 
-                var path = File.ReadAllText(FilePath(baseDir, "JSON/users.json"));
+                var pathToUserJson = File.ReadAllText(FilePath(baseDir, "JSON/users.json"));
+                var pathToOwnersJson = File.ReadAllText(FilePath(baseDir, "JSON/Owners.json"));
 
-                var lmaUsers = JsonConvert.DeserializeObject<List<User>>(path);
-                /* seed theg json*/
+                var lmaUsers = JsonConvert.DeserializeObject<List<User>>(pathToUserJson);
+                var lmaOwners = JsonConvert.DeserializeObject<List<Owner>>(pathToOwnersJson);
+                /* seed the users*/
                 for (int i = 0; i < 5; i++)
                 {
                     lmaUsers[i].EmailConfirmed = true;
                     await userManager.CreateAsync(lmaUsers[i], "Password@123");
                     if (i < 20)
                     {
-                        await userManager.AddToRoleAsync(lmaUsers[i], "ClubOwner");
+                        await userManager.AddToRoleAsync(lmaUsers[i], "Owner");
 
                     }
+                    
+                }
+
+                if(dbContext.Owners.Any() == false)
+                {
+                    
+                         dbContext.Owners.AddRange(lmaOwners);
                     
                 }
             }
