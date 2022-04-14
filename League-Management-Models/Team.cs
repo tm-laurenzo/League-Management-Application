@@ -10,14 +10,16 @@ namespace League_Management_Models
     public class Team
     {
         [Key]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
-        public string Owner { get; set; }
         public string OwnerId { get; set; }
+        public Owner Owner { get; set; }
+        public string ManagerId { get; set; }
+        public Manager Manager { get; set; }
+
         public DateTime FoundedeAt { get; set; }
         public ICollection<Player> Players { get; set; }
-        public Manager Manager { get; set; }
         public string Logo { get; set; }
-        public Double Valution { get; set; }
+        public Decimal Valaution { get; set; }
     }
 }
