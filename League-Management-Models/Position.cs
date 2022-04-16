@@ -10,7 +10,7 @@ namespace League_Management_Models
     public class Position
     {
         [Key]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public int Number { get; set; }
         public string Name { get; set; }
 
