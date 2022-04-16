@@ -1,0 +1,97 @@
+JG.repeat(11,{
+
+id:`${JG.objectId()}`,
+Name: `${JG.company() + " F.C"}`,
+OwnerId:`${JG.objectId()}`,
+Owner(){ return{
+	UserId: this.OwnerId,
+  		User: {
+          id: this.OwnerId,
+          FirstName: `${JG.firstName()}`,
+          LastName: `${JG.firstName()}`,
+          email:`${JG.firstName().toLowerCase() + '@' +       JG.company().toLowerCase()}`,
+          Gender: `${JG.random('male','female')}`,
+          Age: `${JG.integer(20,40)}`,
+          IsActive: `${JG.bool()}`,
+          PublicId: `${JG.guid()}`,
+          Avatar: `${"http://placehold.it/32x32"}`,
+          CreatedAt: `${JG.date(new Date(2010, 0, 1), new Date(2015, 0, 1))}`,
+          UpdatedAt:`${moment(this.createdAt).add(1, 'days')}`,
+         }
+  		};
+    },
+ManagerId:`${JG.objectId()}`,
+Manager(){return{
+	UserId: this.ManagerId,
+  	User: {
+          id: this.ManagerId,
+          FirstName: `${JG.firstName()}`,
+          LastName: `${JG.firstName()}`,
+          email:`${JG.firstName().toLowerCase() + '@' +       JG.company().toLowerCase()}`,
+          Gender: `${JG.random('male','female')}`,
+          Age: `${JG.integer(20,40)}`,
+          IsActive: `${JG.bool()}`,
+          PublicId: `${JG.guid()}`,
+          Avatar: `${"http://placehold.it/32x32"}`,
+          CreatedAt: `${JG.date(new Date(2010, 0, 1), new Date(2015, 0, 1))}`,
+          UpdatedAt:`${moment(this.createdAt).add(1, 'days')}`,
+         },
+  	AgentId: JG.objectId(),
+    Agent: {
+          id: this.AgentId,
+          FirstName: `${JG.firstName()}`,
+          LastName: `${JG.firstName()}`,
+          email:`${JG.firstName().toLowerCase() + '@' +       JG.company().toLowerCase()}`,
+          Gender: `${JG.random('male','female')}`,
+          Age: `${JG.integer(20,40)}`,
+          IsActive: `${JG.bool()}`,
+          PublicId: `${JG.guid()}`,
+          Avatar: `${"http://placehold.it/32x32"}`,
+          CreatedAt: `${JG.date(new Date(2010, 0, 1), new Date(2015, 0, 1))}`,
+          UpdatedAt:`${moment(this.createdAt).add(1, 'days')}`,
+         },
+    AccountName: `${this.AgentId }`+"   gh",
+    AccountNumber:`${JG.integer(1000000000,9999999999)}`
+  		};
+    },
+});
+
+
+JG.repeat(11, {
+  UserId: JG.objectId(),
+  User: function() {
+    return {
+    id: this.UserId,
+    FirstName: `${JG.firstName()}`,
+    LastName: `${JG.firstName()}`,
+    email:`${JG.firstName().toLowerCase() + '@' + JG.company().toLowerCase()}`,
+    Gender: `${JG.random('male','female')}`,
+    Age: `${JG.integer(20,40)}`,
+    IsActive: `${JG.bool()}`,
+	PublicId: `${JG.guid()}`,
+    Avatar: `${"http://placehold.it/32x32"}`,
+    CreatedAt: `${ new Date(2015, 0, 1)}`,
+    UpdatedAt:`${moment(this.createdAt).add(1, 'days')}`,
+   };
+  },
+  AgentId: JG.objectId(),
+  Agent: function() {
+    return {
+    id: this.AgentId,
+    FirstName: `${JG.firstName()}`,
+    LastName: `${JG.firstName()}`,
+    email:`${JG.firstName().toLowerCase() + '@' + JG.company().toLowerCase()}`,
+    Gender: `${JG.random('male','female')}`,
+    Age: `${JG.integer(20,40)}`,
+    IsActive: `${JG.bool()}`,
+	PublicId: `${JG.guid()}`,
+    Avatar: `${"http://placehold.it/32x32"}`,
+    CreatedAt: `${ new Date(2015, 0, 1)}`,
+    UpdatedAt:`${moment(this.createdAt).add(1, 'days')}`,
+   };
+  },
+  AcountName: function(){return `${this.User.FirstName + " " + this.User.LastName}`;},
+  AccountNumber:`${JG.integer(1000000000,9999999999)}`,
+  JerseyNumber: `${JG.integer()}`,
+ 
+});
