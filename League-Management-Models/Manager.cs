@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -17,7 +18,11 @@ namespace League_Management_Models
         public Agent Agent { get; set; }
         public string AccountName { get; set; }
         public string AccountNumber { get; set; }
-        
-        public ICollection<Team> ListOfTeams { get; set; }
+        public string? CurrentTeamId { get; set; }
+        [NotMapped]
+        public Team? CurrentTeam { get; set; }
+        [NotMapped]
+        public ICollection<Team> ListOfPreviousTeams { get; set; }
+
     }
 }

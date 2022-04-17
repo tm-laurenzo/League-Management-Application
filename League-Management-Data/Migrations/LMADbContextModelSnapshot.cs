@@ -77,8 +77,8 @@ namespace League_Management_Data.Migrations
                     b.Property<string>("ScorerUserId")
                         .HasColumnType("text");
 
-                    b.Property<Guid?>("TeamId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("TeamId")
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("Time")
                         .HasColumnType("timestamp without time zone");
@@ -107,12 +107,15 @@ namespace League_Management_Data.Migrations
                     b.Property<string>("AccountNumber")
                         .HasColumnType("text");
 
-                    b.Property<string>("AgentUserId")
+                    b.Property<string>("AgentId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CurrentTeamId")
                         .HasColumnType("text");
 
                     b.HasKey("UserId");
 
-                    b.HasIndex("AgentUserId");
+                    b.HasIndex("AgentId");
 
                     b.ToTable("Managers");
                 });
@@ -169,8 +172,8 @@ namespace League_Management_Data.Migrations
                     b.Property<int>("PenaltyKicks")
                         .HasColumnType("integer");
 
-                    b.Property<Guid?>("TeamId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("TeamId")
+                        .HasColumnType("text");
 
                     b.Property<int>("TeamSaves")
                         .HasColumnType("integer");
@@ -206,24 +209,31 @@ namespace League_Management_Data.Migrations
                     b.Property<string>("AccountNumber")
                         .HasColumnType("text");
 
-                    b.Property<string>("AgentUserId")
+                    b.Property<string>("AgentId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CurrentTeamId")
                         .HasColumnType("text");
 
                     b.Property<string>("JerseyNumber")
                         .HasColumnType("text");
 
+                    b.Property<string>("TeamId")
+                        .HasColumnType("text");
+
                     b.HasKey("UserId");
 
-                    b.HasIndex("AgentUserId");
+                    b.HasIndex("AgentId");
+
+                    b.HasIndex("TeamId");
 
                     b.ToTable("Players");
                 });
 
             modelBuilder.Entity("League_Management_Models.Position", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
@@ -269,9 +279,8 @@ namespace League_Management_Data.Migrations
 
             modelBuilder.Entity("League_Management_Models.Team", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("FoundedeAt")
                         .HasColumnType("timestamp without time zone");
@@ -279,24 +288,23 @@ namespace League_Management_Data.Migrations
                     b.Property<string>("Logo")
                         .HasColumnType("text");
 
-                    b.Property<string>("ManagerUserId")
+                    b.Property<string>("ManagerId")
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
-                    b.Property<string>("Owner")
-                        .HasColumnType("text");
-
                     b.Property<string>("OwnerId")
                         .HasColumnType("text");
 
-                    b.Property<double>("Valution")
-                        .HasColumnType("double precision");
+                    b.Property<decimal>("Valaution")
+                        .HasColumnType("numeric");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ManagerUserId");
+                    b.HasIndex("ManagerId");
+
+                    b.HasIndex("OwnerId");
 
                     b.ToTable("Teams");
                 });
@@ -522,21 +530,6 @@ namespace League_Management_Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("PlayerTeam", b =>
-                {
-                    b.Property<Guid>("ListOfTeamsId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("PlayersUserId")
-                        .HasColumnType("text");
-
-                    b.HasKey("ListOfTeamsId", "PlayersUserId");
-
-                    b.HasIndex("PlayersUserId");
-
-                    b.ToTable("PlayerTeam");
-                });
-
             modelBuilder.Entity("League_Management_Models.Agent", b =>
                 {
                     b.HasOne("League_Management_Models.User", "User")
@@ -590,7 +583,7 @@ namespace League_Management_Data.Migrations
                 {
                     b.HasOne("League_Management_Models.Agent", "Agent")
                         .WithMany()
-                        .HasForeignKey("AgentUserId");
+                        .HasForeignKey("AgentId");
 
                     b.HasOne("League_Management_Models.User", "User")
                         .WithOne("Manager")
@@ -650,7 +643,11 @@ namespace League_Management_Data.Migrations
                 {
                     b.HasOne("League_Management_Models.Agent", "Agent")
                         .WithMany()
-                        .HasForeignKey("AgentUserId");
+                        .HasForeignKey("AgentId");
+
+                    b.HasOne("League_Management_Models.Team", null)
+                        .WithMany("Players")
+                        .HasForeignKey("TeamId");
 
                     b.HasOne("League_Management_Models.User", "User")
                         .WithOne("Player")
@@ -682,10 +679,16 @@ namespace League_Management_Data.Migrations
             modelBuilder.Entity("League_Management_Models.Team", b =>
                 {
                     b.HasOne("League_Management_Models.Manager", "Manager")
-                        .WithMany("ListOfTeams")
-                        .HasForeignKey("ManagerUserId");
+                        .WithMany()
+                        .HasForeignKey("ManagerId");
+
+                    b.HasOne("League_Management_Models.Owner", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId");
 
                     b.Navigation("Manager");
+
+                    b.Navigation("Owner");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -739,26 +742,6 @@ namespace League_Management_Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PlayerTeam", b =>
-                {
-                    b.HasOne("League_Management_Models.Team", null)
-                        .WithMany()
-                        .HasForeignKey("ListOfTeamsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("League_Management_Models.Player", null)
-                        .WithMany()
-                        .HasForeignKey("PlayersUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("League_Management_Models.Manager", b =>
-                {
-                    b.Navigation("ListOfTeams");
-                });
-
             modelBuilder.Entity("League_Management_Models.MatchStatistics", b =>
                 {
                     b.Navigation("Goals");
@@ -779,6 +762,11 @@ namespace League_Management_Data.Migrations
             modelBuilder.Entity("League_Management_Models.Refree", b =>
                 {
                     b.Navigation("ListOfMatches");
+                });
+
+            modelBuilder.Entity("League_Management_Models.Team", b =>
+                {
+                    b.Navigation("Players");
                 });
 
             modelBuilder.Entity("League_Management_Models.User", b =>

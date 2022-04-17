@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace League_Management_Data.Migrations
 {
-    public partial class firstLMA : Migration
+    public partial class FirstMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -230,16 +230,17 @@ namespace League_Management_Data.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "text", nullable: false),
-                    AgentUserId = table.Column<string>(type: "text", nullable: true),
+                    AgentId = table.Column<string>(type: "text", nullable: true),
                     AccountName = table.Column<string>(type: "text", nullable: true),
-                    AccountNumber = table.Column<string>(type: "text", nullable: true)
+                    AccountNumber = table.Column<string>(type: "text", nullable: true),
+                    CurrentTeamId = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Managers", x => x.UserId);
                     table.ForeignKey(
-                        name: "FK_Managers_Agents_AgentUserId",
-                        column: x => x.AgentUserId,
+                        name: "FK_Managers_Agents_AgentId",
+                        column: x => x.AgentId,
                         principalTable: "Agents",
                         principalColumn: "UserId",
                         onDelete: ReferentialAction.Restrict);
@@ -252,72 +253,30 @@ namespace League_Management_Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Players",
-                columns: table => new
-                {
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    AgentUserId = table.Column<string>(type: "text", nullable: true),
-                    AccountName = table.Column<string>(type: "text", nullable: true),
-                    AccountNumber = table.Column<string>(type: "text", nullable: true),
-                    JerseyNumber = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Players", x => x.UserId);
-                    table.ForeignKey(
-                        name: "FK_Players_Agents_AgentUserId",
-                        column: x => x.AgentUserId,
-                        principalTable: "Agents",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Players_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Teams",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Id = table.Column<string>(type: "text", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: true),
-                    Owner = table.Column<string>(type: "text", nullable: true),
                     OwnerId = table.Column<string>(type: "text", nullable: true),
+                    ManagerId = table.Column<string>(type: "text", nullable: true),
                     FoundedeAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    ManagerUserId = table.Column<string>(type: "text", nullable: true),
                     Logo = table.Column<string>(type: "text", nullable: true),
-                    Valution = table.Column<double>(type: "double precision", nullable: false)
+                    Valaution = table.Column<decimal>(type: "numeric", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Teams", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Teams_Managers_ManagerUserId",
-                        column: x => x.ManagerUserId,
+                        name: "FK_Teams_Managers_ManagerId",
+                        column: x => x.ManagerId,
                         principalTable: "Managers",
                         principalColumn: "UserId",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Positions",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Number = table.Column<int>(type: "integer", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: true),
-                    PlayerUserId = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Positions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Positions_Players_PlayerUserId",
-                        column: x => x.PlayerUserId,
-                        principalTable: "Players",
+                        name: "FK_Teams_Owners_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "Owners",
                         principalColumn: "UserId",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -327,7 +286,7 @@ namespace League_Management_Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    TeamId = table.Column<Guid>(type: "uuid", nullable: true),
+                    TeamId = table.Column<string>(type: "text", nullable: true),
                     MyProperty = table.Column<int>(type: "integer", nullable: false),
                     Throwings = table.Column<int>(type: "integer", nullable: false),
                     CornerKicks = table.Column<int>(type: "integer", nullable: false),
@@ -348,92 +307,34 @@ namespace League_Management_Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PlayerTeam",
+                name: "Players",
                 columns: table => new
                 {
-                    ListOfTeamsId = table.Column<Guid>(type: "uuid", nullable: false),
-                    PlayersUserId = table.Column<string>(type: "text", nullable: false)
+                    UserId = table.Column<string>(type: "text", nullable: false),
+                    AgentId = table.Column<string>(type: "text", nullable: true),
+                    AccountName = table.Column<string>(type: "text", nullable: true),
+                    AccountNumber = table.Column<string>(type: "text", nullable: true),
+                    JerseyNumber = table.Column<string>(type: "text", nullable: true),
+                    CurrentTeamId = table.Column<string>(type: "text", nullable: true),
+                    TeamId = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PlayerTeam", x => new { x.ListOfTeamsId, x.PlayersUserId });
+                    table.PrimaryKey("PK_Players", x => x.UserId);
                     table.ForeignKey(
-                        name: "FK_PlayerTeam_Players_PlayersUserId",
-                        column: x => x.PlayersUserId,
-                        principalTable: "Players",
+                        name: "FK_Players_Agents_AgentId",
+                        column: x => x.AgentId,
+                        principalTable: "Agents",
                         principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_PlayerTeam_Teams_ListOfTeamsId",
-                        column: x => x.ListOfTeamsId,
-                        principalTable: "Teams",
+                        name: "FK_Players_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Cards",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    PlayerUserId = table.Column<string>(type: "text", nullable: true),
-                    YellowCard = table.Column<bool>(type: "boolean", nullable: false),
-                    RedCard = table.Column<bool>(type: "boolean", nullable: false),
-                    TimeOfCard = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    MatchStatisticsId = table.Column<Guid>(type: "uuid", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cards", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Cards_MatchStatistics_MatchStatisticsId",
-                        column: x => x.MatchStatisticsId,
-                        principalTable: "MatchStatistics",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Cards_Players_PlayerUserId",
-                        column: x => x.PlayerUserId,
-                        principalTable: "Players",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Goals",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    TeamId = table.Column<Guid>(type: "uuid", nullable: true),
-                    ScorerUserId = table.Column<string>(type: "text", nullable: true),
-                    AssistProviderUserId = table.Column<string>(type: "text", nullable: true),
-                    Penalty = table.Column<bool>(type: "boolean", nullable: false),
-                    Time = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    MatchStatisticsId = table.Column<Guid>(type: "uuid", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Goals", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Goals_MatchStatistics_MatchStatisticsId",
-                        column: x => x.MatchStatisticsId,
-                        principalTable: "MatchStatistics",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Goals_Players_AssistProviderUserId",
-                        column: x => x.AssistProviderUserId,
-                        principalTable: "Players",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Goals_Players_ScorerUserId",
-                        column: x => x.ScorerUserId,
-                        principalTable: "Players",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Goals_Teams_TeamId",
+                        name: "FK_Players_Teams_TeamId",
                         column: x => x.TeamId,
                         principalTable: "Teams",
                         principalColumn: "Id",
@@ -475,6 +376,95 @@ namespace League_Management_Data.Migrations
                         name: "FK_Matches_Refrees_RefreeUserId",
                         column: x => x.RefreeUserId,
                         principalTable: "Refrees",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Cards",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    PlayerUserId = table.Column<string>(type: "text", nullable: true),
+                    YellowCard = table.Column<bool>(type: "boolean", nullable: false),
+                    RedCard = table.Column<bool>(type: "boolean", nullable: false),
+                    TimeOfCard = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    MatchStatisticsId = table.Column<Guid>(type: "uuid", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cards", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Cards_MatchStatistics_MatchStatisticsId",
+                        column: x => x.MatchStatisticsId,
+                        principalTable: "MatchStatistics",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Cards_Players_PlayerUserId",
+                        column: x => x.PlayerUserId,
+                        principalTable: "Players",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Goals",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    TeamId = table.Column<string>(type: "text", nullable: true),
+                    ScorerUserId = table.Column<string>(type: "text", nullable: true),
+                    AssistProviderUserId = table.Column<string>(type: "text", nullable: true),
+                    Penalty = table.Column<bool>(type: "boolean", nullable: false),
+                    Time = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    MatchStatisticsId = table.Column<Guid>(type: "uuid", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Goals", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Goals_MatchStatistics_MatchStatisticsId",
+                        column: x => x.MatchStatisticsId,
+                        principalTable: "MatchStatistics",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Goals_Players_AssistProviderUserId",
+                        column: x => x.AssistProviderUserId,
+                        principalTable: "Players",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Goals_Players_ScorerUserId",
+                        column: x => x.ScorerUserId,
+                        principalTable: "Players",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Goals_Teams_TeamId",
+                        column: x => x.TeamId,
+                        principalTable: "Teams",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Positions",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "text", nullable: false),
+                    Number = table.Column<int>(type: "integer", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    PlayerUserId = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Positions", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Positions_Players_PlayerUserId",
+                        column: x => x.PlayerUserId,
+                        principalTable: "Players",
                         principalColumn: "UserId",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -547,9 +537,9 @@ namespace League_Management_Data.Migrations
                 column: "TeamId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Managers_AgentUserId",
+                name: "IX_Managers_AgentId",
                 table: "Managers",
-                column: "AgentUserId");
+                column: "AgentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Matches_AwayTeamId",
@@ -577,14 +567,14 @@ namespace League_Management_Data.Migrations
                 column: "TeamId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Players_AgentUserId",
+                name: "IX_Players_AgentId",
                 table: "Players",
-                column: "AgentUserId");
+                column: "AgentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PlayerTeam_PlayersUserId",
-                table: "PlayerTeam",
-                column: "PlayersUserId");
+                name: "IX_Players_TeamId",
+                table: "Players",
+                column: "TeamId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Positions_PlayerUserId",
@@ -597,9 +587,14 @@ namespace League_Management_Data.Migrations
                 column: "UserId1");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Teams_ManagerUserId",
+                name: "IX_Teams_ManagerId",
                 table: "Teams",
-                column: "ManagerUserId");
+                column: "ManagerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teams_OwnerId",
+                table: "Teams",
+                column: "OwnerId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -629,12 +624,6 @@ namespace League_Management_Data.Migrations
                 name: "Matches");
 
             migrationBuilder.DropTable(
-                name: "Owners");
-
-            migrationBuilder.DropTable(
-                name: "PlayerTeam");
-
-            migrationBuilder.DropTable(
                 name: "Positions");
 
             migrationBuilder.DropTable(
@@ -657,6 +646,9 @@ namespace League_Management_Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Managers");
+
+            migrationBuilder.DropTable(
+                name: "Owners");
 
             migrationBuilder.DropTable(
                 name: "Agents");

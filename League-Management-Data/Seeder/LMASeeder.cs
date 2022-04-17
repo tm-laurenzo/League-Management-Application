@@ -51,9 +51,11 @@ namespace League_Management_Data.Seeder
 
                 var pathToUserJson = File.ReadAllText(FilePath(baseDir, "JSON/users.json"));
                 var pathToOwnersJson = File.ReadAllText(FilePath(baseDir, "JSON/Owners.json"));
+                var pathToTeamsJson = File.ReadAllText(FilePath(baseDir, "JSON/Teams.json"));
 
                 var lmaUsers = JsonConvert.DeserializeObject<List<User>>(pathToUserJson);
                 var lmaOwners = JsonConvert.DeserializeObject<List<Owner>>(pathToOwnersJson);
+                var lmaTeams = JsonConvert.DeserializeObject<List<Team>>(pathToTeamsJson);
                 /* seed the users*/
                 for (int i = 0; i < 5; i++)
                 {
@@ -69,9 +71,12 @@ namespace League_Management_Data.Seeder
 
                 if(dbContext.Owners.Any() == false)
                 {
-                    
-                         dbContext.Owners.AddRange(lmaOwners);
-                    
+                    dbContext.Owners.AddRange(lmaOwners);
+                }
+
+                if (dbContext.Teams.Any() == false)
+                {
+                    dbContext.Teams.AddRange(lmaTeams);
                 }
             }
             await dbContext.SaveChangesAsync();
