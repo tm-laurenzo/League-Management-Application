@@ -1,0 +1,585 @@
+[
+  {
+    "id": "625ae35c4da2e21aabb4b214",
+    "Name": "Canopoly F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35cf12467cdecfc943d",
+        "Age": "22",
+        "email": "ronda@indexia",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "true",
+        "LastName": "Frieda",
+        "PublicId": "2e73b112-e243-452d-adeb-264a3a65f301",
+        "CreatedAt": "Wed Aug 13 2014 18:42:54 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Reyna",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35cf12467cdecfc943d"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35c05341a5cb9263637",
+        "Age": "21",
+        "email": "violet@comtent",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "true",
+        "LastName": "Lorna",
+        "PublicId": "d997870a-0a49-4ecb-baf4-5166eafe1663",
+        "CreatedAt": "Tue May 18 2010 02:00:50 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Patricia",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "33",
+        "email": "luna@plasmos",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Jeannine",
+        "PublicId": "1f518a9b-229b-4b53-a3bb-6a49f3a34c09",
+        "CreatedAt": "Mon Oct 21 2013 03:46:02 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Kim",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35c05341a5cb9263637",
+      "AgentId": "625ae35ccbd709a9858843ad",
+      "AccountNumber": "2418784528"
+    },
+    "OwnerId": "625ae35cf12467cdecfc943d",
+    "ManagerId": "625ae35c05341a5cb9263637",
+    "AcountName": "Patricia"
+  },
+  {
+    "id": "625ae35c04e2005734821a75",
+    "Name": "Coash F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35ce7ff125003c13f74",
+        "Age": "25",
+        "email": "burton@singavera",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "true",
+        "LastName": "Lina",
+        "PublicId": "dc267e56-e58a-40ce-a60e-66753e092cef",
+        "CreatedAt": "Sat Jul 24 2010 09:53:42 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Raquel",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35ce7ff125003c13f74"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35cbfabf8f751f3652e",
+        "Age": "32",
+        "email": "peterson@undertap",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "true",
+        "LastName": "Pruitt",
+        "PublicId": "c71c7ca1-dcc7-4d74-9635-0c606c8d979d",
+        "CreatedAt": "Fri Nov 05 2010 16:24:51 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Marcia",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "36",
+        "email": "ina@fangold",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "false",
+        "LastName": "Chandler",
+        "PublicId": "f6816fe0-f046-47d0-bafe-c21bee2f58bb",
+        "CreatedAt": "Tue Jul 17 2012 02:47:58 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Wilma",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35cbfabf8f751f3652e",
+      "AgentId": "625ae35c2ad0613b445124d4",
+      "AccountNumber": "9168475400"
+    },
+    "OwnerId": "625ae35ce7ff125003c13f74",
+    "ManagerId": "625ae35cbfabf8f751f3652e",
+    "AcountName": "Marcia"
+  },
+  {
+    "id": "625ae35c194e6df0f596d920",
+    "Name": "Magnemo F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35c95b789ffedbbad73",
+        "Age": "39",
+        "email": "peck@interfind",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "true",
+        "LastName": "April",
+        "PublicId": "0096f125-e4dc-4254-8c2f-48b1cfffbdf0",
+        "CreatedAt": "Sun Sep 05 2010 16:47:06 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Gwendolyn",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35c95b789ffedbbad73"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35cf385ce87515fb459",
+        "Age": "31",
+        "email": "james@mitroc",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "true",
+        "LastName": "Kirby",
+        "PublicId": "06273079-6ddd-40ea-b0fa-45fe60029ef6",
+        "CreatedAt": "Wed May 28 2014 18:53:08 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Laura",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "37",
+        "email": "lindsay@candecor",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "true",
+        "LastName": "Eula",
+        "PublicId": "29a35cb4-15bd-4ffa-b289-732a9f336454",
+        "CreatedAt": "Sat Dec 21 2013 07:51:49 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Jaime",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35cf385ce87515fb459",
+      "AgentId": "625ae35cac0801a461cd9736",
+      "AccountNumber": "3211433369"
+    },
+    "OwnerId": "625ae35c95b789ffedbbad73",
+    "ManagerId": "625ae35cf385ce87515fb459",
+    "AcountName": "Laura"
+  },
+  {
+    "id": "625ae35cebbc63255b49a1d0",
+    "Name": "Zytrac F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35c4d2b16e4c02348aa",
+        "Age": "24",
+        "email": "lindsay@quiltigen",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "false",
+        "LastName": "Estela",
+        "PublicId": "ae50c21e-0c82-48ef-ad7f-6147c6b792a5",
+        "CreatedAt": "Sat Apr 06 2013 07:26:46 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Janell",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35c4d2b16e4c02348aa"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35c49dd8cd3f59f7fbb",
+        "Age": "25",
+        "email": "briggs@euron",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Everett",
+        "PublicId": "cf8f1a9e-01c2-4104-b911-3aa8ea514d50",
+        "CreatedAt": "Sat Jul 19 2014 17:00:09 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Andrews",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "21",
+        "email": "arlene@assitia",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Vonda",
+        "PublicId": "9a486c14-6eef-491a-844a-f6a26329ce74",
+        "CreatedAt": "Wed May 07 2014 05:52:22 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Cheri",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35c49dd8cd3f59f7fbb",
+      "AgentId": "625ae35c260f05d736f22f5c",
+      "AccountNumber": "9099634377"
+    },
+    "OwnerId": "625ae35c4d2b16e4c02348aa",
+    "ManagerId": "625ae35c49dd8cd3f59f7fbb",
+    "AcountName": "Andrews"
+  },
+  {
+    "id": "625ae35ca620a35556c729d4",
+    "Name": "Eplosion F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35ceb7ae8b38c539b46",
+        "Age": "28",
+        "email": "donovan@deviltoe",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "true",
+        "LastName": "Lottie",
+        "PublicId": "ba67f1ad-dafe-4eec-b9a4-44f88c0fdf1c",
+        "CreatedAt": "Wed Apr 18 2012 08:01:15 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Lyons",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35ceb7ae8b38c539b46"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35c638b4cdb78de0e94",
+        "Age": "26",
+        "email": "morris@naxdis",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "true",
+        "LastName": "Carmen",
+        "PublicId": "0cf245a6-9426-4576-b6f2-010fb4cd2ebd",
+        "CreatedAt": "Mon Dec 01 2014 09:45:35 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Christensen",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "35",
+        "email": "myrna@digigen",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "false",
+        "LastName": "Evangeline",
+        "PublicId": "25e678d7-beff-4f6b-bb1e-3bbf931c0a3f",
+        "CreatedAt": "Sat Jul 21 2012 23:59:53 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Lela",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35c638b4cdb78de0e94",
+      "AgentId": "625ae35c7e29187fa7cb6b33",
+      "AccountNumber": "5726861228"
+    },
+    "OwnerId": "625ae35ceb7ae8b38c539b46",
+    "ManagerId": "625ae35c638b4cdb78de0e94",
+    "AcountName": "Christensen"
+  },
+  {
+    "id": "625ae35ca63d182b5f93b57f",
+    "Name": "Musix F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35cb88e3958d1f6f5da",
+        "Age": "36",
+        "email": "pickett@imant",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "true",
+        "LastName": "Serrano",
+        "PublicId": "118b3538-91bc-4814-a024-a5e524b04e1d",
+        "CreatedAt": "Sun Jul 28 2013 11:36:25 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "White",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35cb88e3958d1f6f5da"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35ce78879874e5676d6",
+        "Age": "29",
+        "email": "madeleine@grupoli",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "true",
+        "LastName": "Buckley",
+        "PublicId": "3018e4a6-a52e-4d7b-be5e-16343b6fb90c",
+        "CreatedAt": "Wed Oct 31 2012 06:42:32 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Adkins",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "32",
+        "email": "randi@zoinage",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Suzette",
+        "PublicId": "0e820a99-7d50-4e25-ba55-d227f315ed6c",
+        "CreatedAt": "Sat Jan 04 2014 06:50:23 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Rhodes",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35ce78879874e5676d6",
+      "AgentId": "625ae35ca86ba2d297a1543e",
+      "AccountNumber": "9281672185"
+    },
+    "OwnerId": "625ae35cb88e3958d1f6f5da",
+    "ManagerId": "625ae35ce78879874e5676d6",
+    "AcountName": "Adkins"
+  },
+  {
+    "id": "625ae35c7a68cf589ab283dc",
+    "Name": "Emoltra F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35c4a0cb7b0dd66dd00",
+        "Age": "28",
+        "email": "shawn@bittor",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "true",
+        "LastName": "Nunez",
+        "PublicId": "777b6e07-8267-4e99-b590-6b60cc11045d",
+        "CreatedAt": "Tue Apr 30 2013 03:23:37 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Annmarie",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35c4a0cb7b0dd66dd00"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35c74c96b2916d177ab",
+        "Age": "22",
+        "email": "liza@joviold",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "false",
+        "LastName": "Latasha",
+        "PublicId": "ee2bda87-e6d4-4c85-885c-0eb5ad3de1e8",
+        "CreatedAt": "Fri Aug 24 2012 18:57:16 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Shelton",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "28",
+        "email": "macias@zillanet",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Stephens",
+        "PublicId": "0c473c8a-dd3d-406c-ac16-3b869cd62abd",
+        "CreatedAt": "Fri May 20 2011 07:44:15 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Burris",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35c74c96b2916d177ab",
+      "AgentId": "625ae35c3c7d6f2ae12ef63b",
+      "AccountNumber": "9408414605"
+    },
+    "OwnerId": "625ae35c4a0cb7b0dd66dd00",
+    "ManagerId": "625ae35c74c96b2916d177ab",
+    "AcountName": "Shelton"
+  },
+  {
+    "id": "625ae35ced7a691744412e01",
+    "Name": "Xinware F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35cf3e0b904e17eeb25",
+        "Age": "22",
+        "email": "cardenas@junipoor",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "false",
+        "LastName": "Darcy",
+        "PublicId": "73fbc02f-3e47-4224-8ad7-80526f597406",
+        "CreatedAt": "Mon Oct 04 2010 18:37:31 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Carla",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35cf3e0b904e17eeb25"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35c61f0c2526b0bc2bd",
+        "Age": "35",
+        "email": "boone@capscreen",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Amalia",
+        "PublicId": "057d4cd5-82eb-4d62-a19a-19e9008fdda3",
+        "CreatedAt": "Thu Jan 24 2013 18:36:43 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Zimmerman",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "22",
+        "email": "dee@tasmania",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Shelley",
+        "PublicId": "0ad2576c-041b-404e-a1a6-1b44f503f21f",
+        "CreatedAt": "Tue Jun 15 2010 13:29:02 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Kim",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35c61f0c2526b0bc2bd",
+      "AgentId": "625ae35c98ae1cd5e7247087",
+      "AccountNumber": "1811835794"
+    },
+    "OwnerId": "625ae35cf3e0b904e17eeb25",
+    "ManagerId": "625ae35c61f0c2526b0bc2bd",
+    "AcountName": "Zimmerman"
+  },
+  {
+    "id": "625ae35c00d3df9f42b5916c",
+    "Name": "Collaire F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35c712f52115e774728",
+        "Age": "36",
+        "email": "sherry@ozean",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "true",
+        "LastName": "Elvira",
+        "PublicId": "4f05efda-2eb0-4af9-9e51-424e874ec0a0",
+        "CreatedAt": "Mon Sep 24 2012 11:06:39 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Brennan",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35c712f52115e774728"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35c72771a0acbca424e",
+        "Age": "33",
+        "email": "donaldson@cognicode",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "true",
+        "LastName": "Jeanette",
+        "PublicId": "b3efd117-fb8a-4238-b572-37137c7952b1",
+        "CreatedAt": "Mon Jul 28 2014 20:40:28 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Strickland",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "39",
+        "email": "atkinson@glukgluk",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Little",
+        "PublicId": "dda3651d-5dcc-4d7c-9bfc-9e0915175c8f",
+        "CreatedAt": "Tue Mar 05 2013 04:20:04 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Fischer",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35c72771a0acbca424e",
+      "AgentId": "625ae35c77c41d3d368d5842",
+      "AccountNumber": "3007155635"
+    },
+    "OwnerId": "625ae35c712f52115e774728",
+    "ManagerId": "625ae35c72771a0acbca424e",
+    "AcountName": "Strickland"
+  },
+  {
+    "id": "625ae35cf24805196e1c6c5c",
+    "Name": "Nurplex F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35cca7e7a5b70525681",
+        "Age": "37",
+        "email": "contreras@firewax",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Miles",
+        "PublicId": "89e8c412-4b29-40e8-b08c-3dfcd6bc3cca",
+        "CreatedAt": "Wed Jun 08 2011 23:07:00 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Stacie",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35cca7e7a5b70525681"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35cb045bf34de2ea03f",
+        "Age": "34",
+        "email": "maribel@vidto",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "male",
+        "IsActive": "false",
+        "LastName": "Middleton",
+        "PublicId": "54ceea78-1017-41f6-a2cc-613fa03e95eb",
+        "CreatedAt": "Sat Sep 10 2011 16:32:54 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Blevins",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "29",
+        "email": "cobb@prismatic",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "true",
+        "LastName": "Bolton",
+        "PublicId": "c32e416e-4526-47a5-9cb6-4aa90aa13656",
+        "CreatedAt": "Fri Jun 14 2013 20:17:35 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Oconnor",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35cb045bf34de2ea03f",
+      "AgentId": "625ae35c9c07626beaf88b9e",
+      "AccountNumber": "8561096332"
+    },
+    "OwnerId": "625ae35cca7e7a5b70525681",
+    "ManagerId": "625ae35cb045bf34de2ea03f",
+    "AcountName": "Blevins"
+  },
+  {
+    "id": "625ae35cb971ff4efe61c1e4",
+    "Name": "Bisba F.C",
+    "Owner": {
+      "User": {
+        "id": "625ae35ce74b5fe14a7f64c4",
+        "Age": "32",
+        "email": "elma@kengen",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Tonya",
+        "PublicId": "37a5f0bc-3f05-439b-b1f1-81d36db2bb32",
+        "CreatedAt": "Sat Feb 12 2011 09:04:17 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Bertie",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "UserId": "625ae35ce74b5fe14a7f64c4"
+    },
+    "Manager": {
+      "User": {
+        "id": "625ae35cbb47268ec70fb792",
+        "Age": "21",
+        "email": "pennington@exposa",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "false",
+        "LastName": "Valenzuela",
+        "PublicId": "3bdf6a0a-4fc7-4d56-9c53-c9668daa267f",
+        "CreatedAt": "Sat Sep 25 2010 06:09:03 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Noble",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "Agent": {
+        "Age": "25",
+        "email": "knapp@snowpoke",
+        "Avatar": "http://placehold.it/32x32",
+        "Gender": "female",
+        "IsActive": "true",
+        "LastName": "Peggy",
+        "PublicId": "59a138a4-de10-419f-8e6d-d8635c4f66e9",
+        "CreatedAt": "Sun Apr 03 2011 02:52:53 GMT+0000 (Coordinated Universal Time)",
+        "FirstName": "Lois",
+        "UpdatedAt": "Sun Apr 17 2022 15:40:12 GMT+0000"
+      },
+      "userId": "625ae35cbb47268ec70fb792",
+      "AgentId": "625ae35cd012199495d4fba4",
+      "AccountNumber": "5303524681"
+    },
+    "OwnerId": "625ae35ce74b5fe14a7f64c4",
+    "ManagerId": "625ae35cbb47268ec70fb792",
+    "AcountName": "Noble"
+  }
+]
