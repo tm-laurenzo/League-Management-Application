@@ -20,6 +20,6 @@ namespace League_Management_Models
         public DateTime FoundedeAt { get; set; }
         public ICollection<Player> Players { get; set; }
         public string Logo { get; set; }
-        public Decimal Valaution { get; set; }
+        public Decimal Valuation { get; set; }
     }
 }
