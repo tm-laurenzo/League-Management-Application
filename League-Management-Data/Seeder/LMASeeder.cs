@@ -56,6 +56,12 @@ namespace League_Management_Data.Seeder
                 var lmaUsers = JsonConvert.DeserializeObject<List<User>>(pathToUserJson);
                 var lmaOwners = JsonConvert.DeserializeObject<List<Owner>>(pathToOwnersJson);
                 var lmaTeams = JsonConvert.DeserializeObject<List<Team>>(pathToTeamsJson);
+                //Add AgentId
+                foreach(Team team in lmaTeams)
+                {
+                    team.Manager.Agent.UserId = team.Manager.AgentId;
+                }
+
                 /* seed the users*/
                 for (int i = 0; i < 5; i++)
                 {
@@ -73,6 +79,7 @@ namespace League_Management_Data.Seeder
                 {
                     dbContext.Owners.AddRange(lmaOwners);
                 }
+                await dbContext.SaveChangesAsync();
 
                 if (dbContext.Teams.Any() == false)
                 {
