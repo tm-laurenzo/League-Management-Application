@@ -17,6 +17,7 @@ namespace League_Management_Data.Repositories.Implementations
         public GenericRepository(LMADbContext context)
         {
             _context = context;
+
             _dbSet = _context.Set<T>();
 
 
