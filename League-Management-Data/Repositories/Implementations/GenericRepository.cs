@@ -1,4 +1,5 @@
 ﻿using League_Management_Data.Context;
+using League_Management_Data.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace League_Management_Data.Repositories.Implementations
 
         public GenericRepository(LMADbContext context)
         {
-            _context = context;
+            _context = context ;
 
             _dbSet = _context.Set<T>();
 
