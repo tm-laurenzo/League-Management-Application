@@ -25,6 +25,7 @@ namespace League_Management_Data.Repositories.Implementations
         }
         public void Delete(T entity)
         {
+
             _dbSet.Remove(entity);
         }
 
