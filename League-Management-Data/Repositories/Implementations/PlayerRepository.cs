@@ -12,8 +12,9 @@ namespace League_Management_Data.Repositories
 {
 
     /* Get a player by Id
-       Get all players in a team
-       Get p
+       Get all previous teams of player
+       Get all positions of a player
+       Get player by email
      */
     public class PlayerRepository : GenericRepository<Player>
     {
@@ -25,9 +26,13 @@ namespace League_Management_Data.Repositories
             _context = context;
             _dbSet = _context.Set<Player>();
         }
-        public async Task<Player> GetPlayerAsync(string PlayerId)
+        public async Task<Player> GetPlayerAsync(string playerId)
         {
-            return await _context.Players.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == PlayerId);
+            return await _context.Players.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == playerId);
+        }
+        public async Task<Player> GetPlayerByEmailAsync(string playerEmail)
+        {
+            return await _context.Players.Include(x => x.User).FirstOrDefaultAsync(x => x.User.Email == playerEmail);
         }
     }
 }

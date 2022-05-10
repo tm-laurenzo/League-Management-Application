@@ -15,6 +15,7 @@ namespace League_Management_Models
         public string UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Email { get; set; }
         public User User { get; set; }
         public string  AgentId { get; set; }
         public Agent Agent { get; set; }
