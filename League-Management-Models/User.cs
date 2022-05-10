@@ -13,6 +13,7 @@ namespace League_Management_Models
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
         public string Gender { get; set; }
         public int Age { get; set; }
         public bool IsActive { get; set; }
