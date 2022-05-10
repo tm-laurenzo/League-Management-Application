@@ -13,6 +13,7 @@ namespace League_Management_Models
         public string Id { get; set; }
         public string Name { get; set; }
         public string OwnerId { get; set; }
+        public string Email { get; set; }
         public Owner Owner { get; set; }
         public string ManagerId { get; set; }
         public Manager Manager { get; set; }
