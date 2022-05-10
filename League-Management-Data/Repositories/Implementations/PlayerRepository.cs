@@ -10,6 +10,11 @@ using System.Threading.Tasks;
 
 namespace League_Management_Data.Repositories
 {
+
+    /* Get a player by Id
+       Get all players in a team
+       Get p
+     */
     public class PlayerRepository : GenericRepository<Player>
     {
         private readonly LMADbContext _context;
@@ -19,6 +24,10 @@ namespace League_Management_Data.Repositories
         {
             _context = context;
             _dbSet = _context.Set<Player>();
+        }
+        public async Task<Player> GetPlayerAsync(string PlayerId)
+        {
+            return await _context.Players.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == PlayerId);
         }
     }
 }
