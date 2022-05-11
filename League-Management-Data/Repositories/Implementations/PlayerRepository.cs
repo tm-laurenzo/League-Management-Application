@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 namespace League_Management_Data.Repositories
 {
 
-    /* Get a player by Id
+    /* Get a player by Id ✔
        Get all previous teams of player
-       Get all positions of a player
-       Get player by email
+       Get all positions of a player 
+       Get player by email ✔
      */
     public class PlayerRepository : GenericRepository<Player>
     {
@@ -33,6 +33,11 @@ namespace League_Management_Data.Repositories
         public async Task<Player> GetPlayerByEmailAsync(string playerEmail)
         {
             return await _context.Players.Include(x => x.User).FirstOrDefaultAsync(x => x.User.Email == playerEmail);
+        }
+        public async Task<IEnumerable<Team>> GetPlayersPreviousTeamsAsync(string playerId)
+        {
+            Player currentPlayer = await _context.Players.FirstOrDefaultAsync(x => x.UserId == playerId);
+            return  currentPlayer.ListOfPreviousTeams;
         }
     }
 }
