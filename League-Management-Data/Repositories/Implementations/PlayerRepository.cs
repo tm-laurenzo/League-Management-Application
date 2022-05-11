@@ -39,5 +39,10 @@ namespace League_Management_Data.Repositories
             Player currentPlayer = await _context.Players.FirstOrDefaultAsync(x => x.UserId == playerId);
             return  currentPlayer.ListOfPreviousTeams;
         }
+        public async Task<IEnumerable<Position>> GetPlayersPositionsAsync(string playerId)
+        {
+            Player currentPlayer = await _context.Players.FirstOrDefaultAsync(x => x.UserId == playerId);
+            return currentPlayer.ListOfPositions;
+        }
     }
 }
