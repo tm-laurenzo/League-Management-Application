@@ -15,6 +15,8 @@ namespace League_Management_Data.Repositories
        Get all previous teams of player
        Get all positions of a player 
        Get player by email ✔
+       Hard Delete player
+       Soft Delete player, go get player by Id and modify it
      */
     public class PlayerRepository : GenericRepository<Player>
     {
@@ -38,6 +40,11 @@ namespace League_Management_Data.Repositories
         {
             Player currentPlayer = await _context.Players.FirstOrDefaultAsync(x => x.UserId == playerId);
             return  currentPlayer.ListOfPreviousTeams;
+        }
+        public async Task<IEnumerable<Position>> GetPlayersPositionsAsync(string playerId)
+        {
+            Player currentPlayer = await _context.Players.FirstOrDefaultAsync(x => x.UserId == playerId);
+            return currentPlayer.ListOfPositions;
         }
     }
 }
