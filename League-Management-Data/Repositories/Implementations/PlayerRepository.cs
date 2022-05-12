@@ -15,6 +15,8 @@ namespace League_Management_Data.Repositories
        Get all previous teams of player
        Get all positions of a player 
        Get player by email ✔
+       Hard Delete player
+       Soft Delete player, go get player by Id and modify it
      */
     public class PlayerRepository : GenericRepository<Player>
     {
