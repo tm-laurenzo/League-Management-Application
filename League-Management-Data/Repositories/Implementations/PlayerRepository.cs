@@ -46,9 +46,15 @@ namespace League_Management_Data.Repositories
             Player currentPlayer = await _context.Players.FirstOrDefaultAsync(x => x.UserId == playerId);
             return currentPlayer.ListOfPositions;
         }
-        public async Task<Player> DeletePlayerAsync(string playerId)
+        public async Task<bool> DeletePlayerAsync(string playerId)
         {
-            return await _context.Players.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == playerId);
+            var player = await GetPlayerAsync(playerId);
+            if(player != null)
+            {
+                _context.Players.Remove(player);
+                return true;
+            }
+            return false;
         }
     }
 }
