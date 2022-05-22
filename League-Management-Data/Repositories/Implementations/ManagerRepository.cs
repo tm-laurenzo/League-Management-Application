@@ -20,9 +20,9 @@ namespace League_Management_Data.Repositories.Implementations
             _context = context;
             _dbSet = _context.Set<Manager>();
         }
-        public async Task<Player> GetPlayerAsync(string playerId)
+        public async Task<Manager> GetPlayerAsync(string ManagerId)
         {
-            return await _context.Players.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == playerId);
+            return await _context.Managers.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == ManagerId);
         }
         public async Task<Player> GetPlayerByEmailAsync(string playerEmail)
         {
