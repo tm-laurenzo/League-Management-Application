@@ -24,14 +24,14 @@ namespace League_Management_Data.Repositories.Implementations
         {
             return await _context.Managers.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == ManagerId);
         }
-        public async Task<Player> GetPlayerByEmailAsync(string playerEmail)
+        public async Task<Manager> GetManagerByEmailAsync(string managerEmail)
         {
-            return await _context.Players.Include(x => x.User).FirstOrDefaultAsync(x => x.User.Email == playerEmail);
+            return await _context.Managers.Include(x => x.User).FirstOrDefaultAsync(x => x.User.Email == managerEmail);
         }
-        public async Task<IEnumerable<Team>> GetPlayersPreviousTeamsAsync(string playerId)
+        public async Task<IEnumerable<Team>> GetManagersPreviousTeamsAsync(string managerId)
         {
-            Player currentPlayer = await _context.Players.FirstOrDefaultAsync(x => x.UserId == playerId);
-            return currentPlayer.ListOfPreviousTeams;
+            Manager currentManger = await _context.Managers.FirstOrDefaultAsync(x => x.UserId == managerId);
+            return currentManger.ListOfPreviousTeams;
         }
         public async Task<IEnumerable<Position>> GetPlayersPositionsAsync(string playerId)
         {
