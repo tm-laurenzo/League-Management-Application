@@ -20,9 +20,9 @@ namespace League_Management_Data.Repositories.Implementations
             _context = context;
             _dbSet = _context.Set<Manager>();
         }
-        public async Task<Manager> GetPlayerAsync(string ManagerId)
+        public async Task<Manager> GetManagerAsync(string managerId)
         {
-            return await _context.Managers.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == ManagerId);
+            return await _context.Managers.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == managerId);
         }
         public async Task<Manager> GetManagerByEmailAsync(string managerEmail)
         {
@@ -33,17 +33,14 @@ namespace League_Management_Data.Repositories.Implementations
             Manager currentManger = await _context.Managers.FirstOrDefaultAsync(x => x.UserId == managerId);
             return currentManger.ListOfPreviousTeams;
         }
-        public async Task<IEnumerable<Position>> GetPlayersPositionsAsync(string playerId)
+      
+        public async Task<bool> DeleteManagerAsync(string managerId)
         {
-            Player currentPlayer = await _context.Players.FirstOrDefaultAsync(x => x.UserId == playerId);
-            return currentPlayer.ListOfPositions;
-        }
-        public async Task<bool> DeletePlayerAsync(string playerId)
-        {
-            var player = await GetPlayerAsync(playerId);
-            if (player != null)
+            var manager = await GetManagerAsync(managerId);
+            if (manager != null)
             {
-                _context.Players.Remove(player);
+                _context.Managers.Remove(manager);
+                
                 return true;
             }
             return false;
