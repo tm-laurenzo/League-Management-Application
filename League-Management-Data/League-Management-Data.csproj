@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\League-Management-Dtos\League-Management-DTOs.csproj" />
     <ProjectReference Include="..\League-Management-Models\League-Management-Models.csproj" />
   </ItemGroup>
 
