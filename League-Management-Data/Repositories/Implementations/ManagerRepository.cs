@@ -34,9 +34,9 @@ namespace League_Management_Data.Repositories.Implementations
             Manager currentManger = await _context.Managers.FirstOrDefaultAsync(x => x.UserId == managerId);
             return currentManger.ListOfPreviousTeams;
         }
-        public async Task<bool> AddManagerAsync(AddManagerDTO newManager)
+        public async Task<bool> AddManagerAsync(AddManagerDTO newManagerDTO)
         {
-
+            Manager newManager = newManagerDTO;
         }
       
         public async Task<bool> DeleteManagerAsync(string managerId)
