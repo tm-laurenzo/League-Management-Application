@@ -23,20 +23,26 @@ namespace League_Management_Data.Repositories.Implementations
         }
         public async Task<Manager> GetManagerAsync(string managerId)
         {
-            return await _context.Managers.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == managerId);
+            return await _dbSet.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == managerId);
         }
         public async Task<Manager> GetManagerByEmailAsync(string managerEmail)
         {
-            return await _context.Managers.Include(x => x.User).FirstOrDefaultAsync(x => x.User.Email == managerEmail);
+            return await _dbSet.Include(x => x.User).FirstOrDefaultAsync(x => x.User.Email == managerEmail);
         }
         public async Task<IEnumerable<Team>> GetManagersPreviousTeamsAsync(string managerId)
         {
-            Manager currentManger = await _context.Managers.FirstOrDefaultAsync(x => x.UserId == managerId);
+            Manager currentManger = await _dbSet.FirstOrDefaultAsync(x => x.UserId == managerId);
             return currentManger.ListOfPreviousTeams;
         }
-        public async Task<bool> AddManagerAsync(AddManagerDTO newManagerDTO)
+        public async Task<bool> AddManagerAsync(Manager managerFromDTO)
         {
-            Manager newManager = newManagerDTO;
+            Manager newManager = managerFromDTO;
+            if(newManager != null)
+            {
+                await _dbSet.AddAsync(newManager);
+                return true;
+            }
+            return false;
         }
       
         public async Task<bool> DeleteManagerAsync(string managerId)
@@ -44,7 +50,7 @@ namespace League_Management_Data.Repositories.Implementations
             var manager = await GetManagerAsync(managerId);
             if (manager != null)
             {
-                _context.Managers.Remove(manager);
+                _dbSet.Remove(manager);
                 
                 return true;
             }
