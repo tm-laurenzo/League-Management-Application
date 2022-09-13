@@ -1,4 +1,5 @@
 ﻿using League_Management_Data.Context;
+using League_Management_Data.Repositories.Abstractions;
 using League_Management_DTOs;
 using League_Management_Models;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace League_Management_Data.Repositories.Implementations
 {
-   public class ManagerRepository : GenericRepository<Manager>
+    public class ManagerRepository : GenericRepository<Manager>, IManagerRepository
     {
 
         private readonly LMADbContext _context;
@@ -37,21 +38,21 @@ namespace League_Management_Data.Repositories.Implementations
         public async Task<bool> AddManagerAsync(Manager managerFromDTO)
         {
             Manager newManager = managerFromDTO;
-            if(newManager != null)
+            if (newManager != null)
             {
                 await _dbSet.AddAsync(newManager);
                 return true;
             }
             return false;
         }
-      
+
         public async Task<bool> DeleteManagerAsync(string managerId)
         {
             var manager = await GetManagerAsync(managerId);
             if (manager != null)
             {
                 _dbSet.Remove(manager);
-                
+
                 return true;
             }
             return false;
