@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="UnitOfWork\" />
+    <Folder Include="UnitOfWork\Implementations\" />
   </ItemGroup>
 
   <ItemGroup>
