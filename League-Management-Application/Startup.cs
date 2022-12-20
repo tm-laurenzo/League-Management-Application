@@ -18,15 +18,15 @@ namespace League_Management_Application
     public class Startup
     {
         public IWebHostEnvironment Environment { get; }
+
         public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Configuration = configuration;
            
             Environment = environment;
         }
-
-       
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)

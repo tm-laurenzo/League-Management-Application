@@ -8,6 +8,6 @@ namespace League_Management_Data.UnitOfWork.Abstractions
 {
     interface IUnitOfWork: IDisposable
     {
-        I
+        
     }
 }
